@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_gravity="center_vertical"
+    tools:context=".presentation.view.fragment.MainFragment">
+
+    <TextView
+        android:id="@+id/text_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Api Key"
+        app:layout_constraintBottom_toTopOf="@id/text_key_value"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/orange"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/text_key_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="ff9f895b2e884d6680530135202710"
+        app:layout_constraintTop_toBottomOf="@id/text_key"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/text_key_value"
+        android:layout_marginTop="5dp"
+        android:background="#eee"/>
+
+    <TextView
+        android:id="@+id/text_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City Name"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/view_1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/orange"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_city_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select City"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/text_city"
+        app:hintTextColor="@android:color/holo_red_dark"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/edit_city_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintTop_toBottomOf="@id/input_city_name"
+        android:text="Submit"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
